@@ -115,6 +115,13 @@
   --bs-form-valid-border-color: #198754;
   --bs-form-invalid-color: #dc3545;
   --bs-form-invalid-border-color: #dc3545;
+  --primary: #efe1d1;
+  --purple: #a78295;
+  --dark-purple: #3f2e3e;
+  --underweight: #83ece6;
+  --normal: #83ec94;
+  --overweight: #ece883;
+  --obesite: #fe9292;
 }
 
 *, ::after, ::before{
@@ -203,12 +210,12 @@ body {
   column-gap: 1rem;
 }
 
-#main-form #gender .input-gender img {
+#main-form #jenis-kelamin .input-gender img {
   width: 80px;
   opacity: 50%;
 }
 
-#main-form #gender .input-gender span {
+#main-form #jenis-kelamin .input-gender span {
   font-size: 15px;
   opacity: 50%;
 }
@@ -224,11 +231,11 @@ body {
   opacity: 0;
 }
 
-#main-form #gender .container-radio input:checked ~ img {
+#main-form #jenis-kelamin .container-radio input:checked ~ img {
   opacity: 100%;
 }
 
-#main-form #gender .container-radio input:checked ~ span {
+#main-form #jenis-kelamin .container-radio input:checked ~ span {
   opacity: 100%;
 }
 
@@ -564,7 +571,7 @@ body {
 }
 
 /* Validasi */
-#berat-badan,
+#container-bb,
 #container-usia,
 #container-tb 
 #container-submit {
