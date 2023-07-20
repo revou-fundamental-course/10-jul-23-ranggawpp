@@ -69,7 +69,7 @@ function hitungBMI() {
   const adviceText = document.getElementById('advice-text');
   const riskTitle = document.getElementById('risk-title');
   const listRisk = document.getElementById('list-risk');
-
+  
   if (bmi < 18.5) {
     resultText.textContent = 'Anda termasuk dalam kategori Kekurangan Berat Badan.';
     suggestionText.textContent = '1. Mungkin Anda perlu meningkatkan asupan nutrisi dan berkonsultasi dengan dokter.';
@@ -94,6 +94,36 @@ function hitungBMI() {
     adviceText.textContent = '2. Perubahan gaya hidup dan pola makan sangat diperlukan.';
     riskTitle.textContent = 'Resiko Kesehatan:';
     listRisk.innerHTML = '<li>Resiko penyakit jantung dan pembuluh darah meningkat</li><li>Resiko diabetes tipe 2 meningkat</li><li>Resiko sleep apnea meningkat</li>';
+  }
+
+  if (bmi < 18.5) {
+    const containerImage = document.getElementsByClassName("underweight");
+    containerImage[0].style.opacity = "100%";
+    containerImage[1].style.opacity = "100%";
+    valueBMI.style.color = "var(--underweight)";
+    bubble.style.backgroundColor = "var(--underweight)";
+    bubble.style.setProperty("--colorAfter", "var(--underweight)");
+  } else if (bmi >= 18.5 && bmi < 25) {
+    const containerImage = document.getElementsByClassName("normal");
+    containerImage[0].style.opacity = "100%";
+    containerImage[1].style.opacity = "100%";
+    valueBMI.style.color = "var(--normal)";
+    bubble.style.backgroundColor = "var(--normal)";
+    bubble.style.setProperty("--colorAfter", "var(--normal)");
+  } else if (bmi >= 25 && bmi < 30) {
+    const containerImage = document.getElementsByClassName("overweight");
+    containerImage[0].style.opacity = "100%";
+    containerImage[1].style.opacity = "100%";
+    valueBMI.style.color = "var(--overweight)";
+    bubble.style.backgroundColor = "var(--overweight)";
+    bubble.style.setProperty("--colorAfter", "var(--overweight)");
+  } else {
+    const containerImage = document.getElementsByClassName("obesity");
+    containerImage[0].style.opacity = "100%";
+    containerImage[1].style.opacity = "100%";
+    valueBMI.style.color = "var(--obesite)";
+    bubble.style.backgroundColor = "var(--obesite)";
+    bubble.style.setProperty("--colorAfter", "var(--obesite)");
   }
 }
 
