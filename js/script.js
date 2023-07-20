@@ -19,7 +19,18 @@ function hitungBMI() {
 
   // Check if all inputs are filled
   if (!gender || isNaN(weight) || isNaN(age) || isNaN(height)) {
-    alert("Harap isi semua bidang dengan benar.");
+    if(!gender){
+      alert("Harap isi Jenis Kelamin!");
+    }
+    if(isNaN(weight)){
+      alert("Harap isi Berat Badan!")
+    }
+    if(isNaN(age)){
+      alert("Harap isi Usia!")
+    }
+    if(isNaN(height)){
+      alert("Harap isi Tinggi Badan!")
+    }
     return;
   }
 
@@ -61,26 +72,26 @@ function hitungBMI() {
 
   if (bmi < 18.5) {
     resultText.textContent = 'Anda termasuk dalam kategori Kekurangan Berat Badan.';
-    suggestionText.textContent = 'Mungkin Anda perlu meningkatkan asupan nutrisi dan berkonsultasi dengan dokter.';
-    adviceText.textContent = 'Tetap perhatikan pola makan dan rajin berolahraga.';
+    suggestionText.textContent = '1. Mungkin Anda perlu meningkatkan asupan nutrisi dan berkonsultasi dengan dokter.';
+    adviceText.textContent = '2. Tetap perhatikan pola makan dan rajin berolahraga.';
     riskTitle.textContent = 'Resiko Kesehatan:';
     listRisk.innerHTML = '<li>Kekurangan energi dan nutrisi</li><li>Mudah lelah dan lesu</li><li>Resiko osteoporosis meningkat</li>';
   } else if (bmi >= 18.5 && bmi < 25) {
     resultText.textContent = 'Anda termasuk dalam kategori Normal atau Sehat.';
-    suggestionText.textContent = 'Pertahankan pola hidup sehat dan rajin berolahraga.';
-    adviceText.textContent = 'Jaga pola makan yang seimbang dan tetap aktif.';
+    suggestionText.textContent = '1. Pertahankan pola hidup sehat dan rajin berolahraga.';
+    adviceText.textContent = '2. Jaga pola makan yang seimbang dan tetap aktif.';
     riskTitle.textContent = 'Resiko Kesehatan:';
     listRisk.innerHTML = '<li>Resiko penyakit berkurang</li><li>Pola hidup sehat membantu mencegah penyakit kronis</li>';
   } else if (bmi >= 25 && bmi < 30) {
     resultText.textContent = 'Anda termasuk dalam kategori Kelebihan Berat Badan.';
-    suggestionText.textContent = 'Coba kurangi asupan kalori dan tingkatkan aktivitas fisik.';
-    adviceText.textContent = 'Jaga pola makan sehat dan tetap bergerak aktif.';
+    suggestionText.textContent = '1. Coba kurangi asupan kalori dan tingkatkan aktivitas fisik.';
+    adviceText.textContent = '2. Jaga pola makan sehat dan tetap bergerak aktif.';
     riskTitle.textContent = 'Resiko Kesehatan:';
     listRisk.innerHTML = '<li>Resiko penyakit kardiovaskular meningkat</li><li>Resiko diabetes meningkat</li>';
   } else {
     resultText.textContent = 'Anda termasuk dalam kategori Obesitas.';
-    suggestionText.textContent = 'Segera konsultasi dengan dokter untuk mendapatkan nasihat dan dukungan.';
-    adviceText.textContent = 'Perubahan gaya hidup dan pola makan sangat diperlukan.';
+    suggestionText.textContent = '1. Segera konsultasi dengan dokter untuk mendapatkan nasihat dan dukungan.';
+    adviceText.textContent = '2. Perubahan gaya hidup dan pola makan sangat diperlukan.';
     riskTitle.textContent = 'Resiko Kesehatan:';
     listRisk.innerHTML = '<li>Resiko penyakit jantung dan pembuluh darah meningkat</li><li>Resiko diabetes tipe 2 meningkat</li><li>Resiko sleep apnea meningkat</li>';
   }
